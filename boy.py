@@ -191,5 +191,5 @@ class Boy:
         if group == 'boy:ball':
             self.ball_count += 1
         if group == 'boy:zombie':
-            print("피격 당함!")
+            quit()
 

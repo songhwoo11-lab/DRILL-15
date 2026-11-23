@@ -57,5 +57,4 @@ class Zombie:
         return self.x - 100, self.y - 100, self.x + 100, self.y + 100
 
     def handle_collision(self, group, other):
-        if group == 'boy:zombie':
-            print("좀비 공격!")
+        pass
