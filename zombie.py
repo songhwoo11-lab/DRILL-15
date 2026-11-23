@@ -62,7 +62,7 @@ class Zombie:
     def handle_collision(self, group, other):
         if group == 'zombie:ball':
             self.collision_ball_count += 1
-            print(f'한 좀비가 맞은 공의 수: {self.collision_ball_count}개')
+            
             if self.collision_ball_count == 1:
                 self.size /= 2
                 self.y -= self.size / 2

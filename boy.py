@@ -86,7 +86,7 @@ class Run:
 
     def draw(self, boy):
         row = 100 if boy.face_dir == 1 else 0
-        # 그림을 선택할 때만 소수 부분을 버린다.
+
         boy.image.clip_draw(int(boy.frame) * 100, row, 100, 100, boy.x, boy.y)
 
     def space(self, boy):
@@ -192,5 +192,5 @@ class Boy:
         if group == 'boy:ball':
             self.ball_count += 1
         if group == 'boy:zombie':
-            quit()
+            game_framework.quit()
 

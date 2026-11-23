@@ -27,11 +27,11 @@ def handle_events():
 def init():
     global boy, balls
 
-    # 객체 생성
+
     boy = Boy()
     grass = Grass()    
     balls = [Ball(random.randint(100, 1500), 60, 0) for _ in range(30)]
-    # 생성된 객체들을 게임 월드에 등록
+
     game_world.add_oject(boy)
     game_world.add_oject(grass, 0)
     game_world.add_objects(balls, 1)
@@ -39,7 +39,6 @@ def init():
     zombies = [Zombie() for _ in range(4)]
     game_world.add_objects(zombies, 1)
 
-    # 생성된 객체들의 충돌 관게를 등록
     game_world.add_collision_pair("boy:ball", boy, None)
     for ball in balls:
         game_world.add_collision_pair("boy:ball", None, ball)
