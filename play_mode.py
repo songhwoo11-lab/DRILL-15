@@ -31,7 +31,6 @@ def init():
     boy = Boy()
     grass = Grass()    
     balls = [Ball(random.randint(100, 1500), 60, 0) for _ in range(30)]
-
     # 생성된 객체들을 게임 월드에 등록
     game_world.add_oject(boy)
     game_world.add_oject(grass, 0)
@@ -51,8 +50,6 @@ def init():
 
     for zombie in zombies:
         game_world.add_collision_pair("zombie:ball", zombie, None)
-    for ball in balls:
-        game_world.add_collision_pair("zombie:ball", None, ball)
 
 def pause():
     boy.pause()
