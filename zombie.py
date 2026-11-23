@@ -34,6 +34,7 @@ class Zombie:
         self.x, self.y = random.randint(MIN_X, MAX_X), 150
         self.frame = random.randint(0, 9)
         self.dir = random.choice([-1, 1])
+        self.collision_ball_count = 0
 
     def update(self):
         dt = game_framework.frame_time
@@ -58,4 +59,5 @@ class Zombie:
 
     def handle_collision(self, group, other):
         if group == 'zombie:ball':
-            print('공에 맞음!')
+            self.collision_ball_count += 1
+            print(f'한 좀비가 맞은 공의 수: {self.collision_ball_count}개')
